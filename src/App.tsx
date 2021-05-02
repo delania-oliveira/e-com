@@ -1,8 +1,18 @@
+import Modal from 'react-modal';
+import { Header } from "./components/Header";
+import { GlobalStyles } from "./styles/global";
+import { Routes } from './routes';
+
+
+Modal.setAppElement('#root');
 
 export function App() {
+  
   return (
     <div className="App">
-      <h1>hi</h1>
+      <Header/>
+      <Routes/>
+      <GlobalStyles/>
     </div>
   );
 }
