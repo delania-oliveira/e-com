@@ -111,18 +111,3 @@ export const Info = styled.div`
   }
  
 `
-export const OthersProducts = styled.div`
-  margin: 2rem 0;
-
-  h2 {
-    color: var(--purple);
-    margin: 1rem 0;
-  }
-  .products {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
- 
-`
