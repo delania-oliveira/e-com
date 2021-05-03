@@ -26,6 +26,7 @@ export const Content = styled.div`
     padding: 0 1rem;
     border-radius: 0.25rem 0 0 0.25rem;
     height: 3rem;
+
   }
   button {
     font-size: 1rem;
@@ -39,6 +40,19 @@ export const Content = styled.div`
 
     &:hover {
       filter: brightness(0.9);
+    }
+  }
+  // Resposividade
+  @media(max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+    margin-bottom: 2rem;
+    }
+
+    input {
+     max-width: 250px;
     }
   }
 `
