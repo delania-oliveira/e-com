@@ -1,14 +1,29 @@
-import { Container, Button } from './styles';
+import { Container, Button, Description } from './styles';
 import Modal from 'react-modal';
-import productImg from '../../assets/product.png';
+
 
 interface modalProductProps {
   isOpen: boolean;
   onRequestClose: () => void;
+  selectProduct: resultItem;
 }
 
+interface resultItem {
+  productId: string;
+  productName: string;
+  description: string;
+  items: [ 
+    {
+    images: [{imageUrl: string}];
+    sellers: [{
+      commertialOffer: {
+        Installments: [{
+           Value: number 
+        }]}}]}
+  ];
+}
 
-export function ProductModal({isOpen, onRequestClose}: modalProductProps) {
+export function ProductModal({isOpen, onRequestClose, selectProduct}: modalProductProps) {
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose} overlayClassName="react-modal-native" className="react-modal-content">
       
@@ -16,19 +31,17 @@ export function ProductModal({isOpen, onRequestClose}: modalProductProps) {
         <i className="fas fa-times"/>
       </button>
       <Container>
-        <div>
-          <img src={productImg} alt=""/>
+        <div className="elementImg">
+          <img src={selectProduct.items[0].images[0].imageUrl} alt={selectProduct.productName}/>
         </div>
         
         <div>
         
-          <h2>Notebook Samsung Book X30 10ª Intel Core I5 8GB 1TB W10 15,6'' Prata</h2>
-          <h1>R$ 3.999,99</h1>
-          <h3>12x de R$ 333,33 sem juros no cartão de crédito</h3>
-        
-          <p>
-            O Samsung Book é o notebook voltado para pessoas dinâmicas que buscam um computador que ofereça alto desempenho aliado a um design moderno...
-          </p>
+          <h2>{selectProduct.productName}</h2>
+          <Description>
+            <p>{selectProduct.description}</p>
+          </Description>
+          <h1>{new Intl.NumberFormat('pt-BR', {style: 'currency', currency:'BRL'}).format(selectProduct.items[0].sellers[0].commertialOffer.Installments[0].Value)}</h1>
           
           <Button>
             <span className="buy">Comprar</span>

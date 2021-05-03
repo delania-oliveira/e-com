@@ -5,30 +5,39 @@ export const Container = styled.div`
  grid-template-columns: 1fr 1fr;
  column-gap: 10px;
  
- img { 
-   max-width: 100%;
- }
+ .elementImg{
+    margin: auto;
+
+   img { 
+     max-width: 100%;
+    }
+  }
+  
  h1 {
    color: var(--orange);
    filter: brightness(0.9);
+   margin-bottom: 2rem;
  }
 
  h2 {
    color: var(--dark-purple);
-   margin-bottom: 1rem;
- }
- 
- h3 {
-   color: var(--dark-purple);
-   font-size: 1rem;
-   margin-bottom: 1.5rem;
- }
- p {
-   color: var(--gray);
-   filter: brightness(0.7);
    margin-bottom: 2rem;
  }
  
+`
+export const Description = styled.div`
+  max-width: 340px;
+  max-height: 115px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2rem;
+
+  p {
+    color: var(--gray);
+    filter: brightness(0.7);
+  }
+
 `
 export const Button = styled.div`
   display: grid;
