@@ -11,7 +11,9 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
+  padding: 0 0.8rem;
   
   img{
     max-width: 75%;
@@ -26,7 +28,7 @@ export const Content = styled.div`
   p {
     color: var(--dark-purple);
     font-size: 0.8rem;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 1rem;
   }
 
