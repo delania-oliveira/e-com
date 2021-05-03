@@ -17,9 +17,14 @@ export const ProductBox = styled.div`
  grid-template-columns: 1fr 1fr;
  column-gap: 10px;
 
- img { 
-   max-width: 100%;
- }
+  .elementImg{
+    margin: auto;
+
+    img { 
+      max-width: 100%;
+    }
+  }
+
  .info {
    display: flex;
    flex-direction: column;
@@ -27,6 +32,7 @@ export const ProductBox = styled.div`
   h1 {
    color: var(--orange);
    filter: brightness(0.9);
+   margin-bottom: 2rem;
   }
 
   h2 {
@@ -38,11 +44,6 @@ export const ProductBox = styled.div`
    color: var(--dark-purple);
    font-size: 1rem;
    margin-bottom: 1.5rem;
-  }
- 
-  p {
-   color: var(--gray);
-   filter: brightness(0.7);
   }
  
   a {
@@ -96,6 +97,20 @@ export const ProductBox = styled.div`
     75% {transform: translateY(-10px);}
   }
 `
+export const Description = styled.div`
+  max-height: 115px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2rem;
+
+  p {
+    color: var(--gray);
+    filter: brightness(0.7);
+  }
+
+`
+
 export const Info = styled.div`
   margin:2rem 0;
   
