@@ -1,9 +1,29 @@
 import { useState } from 'react';
 import { ProductModal } from '../ProductModal';
 import { SingleProduct } from '../SingleProduct';
-import { Container, Content } from './styles';
+import { Container, Content, Element } from './styles';
 
-export function Results() {
+interface ResultProps {
+  results:resultItem[]
+}
+interface resultItem {
+  productId: string;
+  productName: string;
+  description: string;
+  items: [ 
+    {
+    images: [{imageUrl: string}];
+    sellers: [{
+      commertialOffer: {
+        Installments: [{
+           Value: number 
+        }]}}]}
+  ];
+}
+
+export function Results({results}: ResultProps) {
+  const [selectProduct, setSelectProduct] = useState<resultItem>();
+
   const [modalProcuctOpen, setModalProductOpen] = useState(false);
 
   function clickOpenModalProduct() {
@@ -17,10 +37,16 @@ export function Results() {
   return (
     <Container>
       <Content>
-        <span>1-48 de mais de 8.000 resultados para <strong>"notebook samsung"</strong></span>
+        <span>Mostrando Resultados:</span>
         <hr/>
-        <SingleProduct onOpenModalProduct={clickOpenModalProduct}/>
-        <ProductModal isOpen={modalProcuctOpen} onRequestClose={clickCloseModalProduct}/>
+        <Element> 
+          {results?.map(item => {
+            return (
+              <SingleProduct onClick={()=>setSelectProduct(item)} key={item.productId} item={item} onOpenModalProduct={clickOpenModalProduct}/>
+              )
+            })}
+          {selectProduct?<ProductModal selectProduct={selectProduct} isOpen={modalProcuctOpen} onRequestClose={clickCloseModalProduct}/>: <></>}
+        </Element>
       </Content>
     </Container>
   )
