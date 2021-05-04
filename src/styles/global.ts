@@ -86,34 +86,22 @@ export const GlobalStyles = createGlobalStyle`
   // modal Search
   .react-modal-native-autocomplete {
     background: rgba(0,0,0, 0.0);
-    position: relative;
-    top: -70px;
+    position: absolute;
+    top: 100px;
     right: 0;
-    left: 83px;
+    left: 165px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     // Resposividade
     @media(max-width: 768px) {
-      top: -60px;
+      position: absolute;
+      top: 173px;
       left: 0px;
     }
   } 
-  .react-modal-close-autocomplete {
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    border: 0;
-    background: transparent;
-    color: var(--purple);
-    transition: filter 0.2s;
-
-    &:hover {
-      filter: brightness(0.8);
-    }
-  } 
-
+  
   .react-modal-content-autocomplete {
     width: 100%;
     max-width: 600px;
