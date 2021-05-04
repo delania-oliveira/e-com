@@ -10,7 +10,10 @@
 ##### Para contornar esse problema foi adicionado o [cors-anywhere](https://cors-anywhere.herokuapp.com/). Antes de executar a aplicação local é necessario acessar o site [https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/) e clicar no botão `"Request temporary access to the demo server"`
 
 ##  :computer: Deploy
-- [e-com](https://)
+- [e-com](https://e-com.vercel.app/)
+
+##### Se não conseguir visualizar a página: 
+- abra, em uma nova aba, o site [https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/) e clique no botão `"Request temporary access to the demo server"`. Atualize a página.
 
 ##  :sparkles: Tecnologias usadas
 - [React](https://reactjs.org/)
