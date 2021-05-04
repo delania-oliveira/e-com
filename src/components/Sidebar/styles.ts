@@ -4,6 +4,11 @@ export const Container = styled.div`
   background: var(--light-blue);
   max-width: 280px;
   height: 80vh;
+
+  //Responsividade
+  @media(max-width: 768px) {
+    display: none;
+  }
 `
 export const Content = styled.div`
   width: 280px;
@@ -50,4 +55,5 @@ export const Content = styled.div`
       color: var(--purple);
     }
   }
+
 `
