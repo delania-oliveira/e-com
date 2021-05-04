@@ -47,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 600;
   }
 
-  // modal
+  // modal Product
   .react-modal-native {
     background: rgba(0,0,0, 0.5);
     position: fixed;
@@ -80,6 +80,37 @@ export const GlobalStyles = createGlobalStyle`
 
     &:hover {
       filter: brightness(0.8);
+    }
+  }
+
+  // modal Search
+  .react-modal-native-autocomplete {
+    background: rgba(0,0,0, 0.0);
+    position: relative;
+    top: -70px;
+    right: 0;
+    left: 83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Resposividade
+    @media(max-width: 768px) {
+      top: -60px;
+      left: 0px;
+    }
+  } 
+  
+  .react-modal-content-autocomplete {
+    width: 100%;
+    max-width: 600px;
+    background: var(--white);
+    padding: 1.5rem;
+    position: relative;
+
+    // Resposividade
+    @media(max-width: 768px) {
+      max-width: 325px;
     }
   }
 `
