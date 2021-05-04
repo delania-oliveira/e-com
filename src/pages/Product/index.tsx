@@ -46,7 +46,7 @@ export default function Product() {
           
             <h2>{product?.productName}</h2>
             
-            <h1>{product?.items[0].sellers[0].commertialOffer.Installments[0].Value}</h1>
+            {product?<h1>{new Intl.NumberFormat('pt-BR', {style: 'currency', currency:'BRL'}).format(product?.items[0].sellers[0].commertialOffer.Installments[0].Value)}</h1>:<></>}
             
             <Description>
               <p>{product?.description}</p>

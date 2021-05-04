@@ -10,6 +10,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   margin:0 2rem;
   padding: 2rem 0;
+
  
 `
 export const ProductBox = styled.div`
@@ -18,7 +19,7 @@ export const ProductBox = styled.div`
  column-gap: 10px;
 
   .elementImg{
-    margin: auto;
+    margin: auto ;
 
     img { 
       max-width: 100%;
@@ -96,6 +97,13 @@ export const ProductBox = styled.div`
     50% {transform: translateY(0px);}
     75% {transform: translateY(-10px);}
   }
+
+  //Responsividade
+   @media(max-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+
 `
 export const Description = styled.div`
   max-height: 115px;
