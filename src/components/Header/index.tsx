@@ -25,7 +25,6 @@ export function Header() {
          if(response.data) { 
           setModalProductOpen(true)
             setAutoCompleteResult(response.data.itemsReturned)
-            console.log(response.data.itemsReturned)
           }
     })
     }
