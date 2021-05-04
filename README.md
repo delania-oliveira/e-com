@@ -2,12 +2,12 @@
 <h1 align="center">Teste prático para Frontend Developer</h1> 
 
 ##  :camera: Screenshots
-<p align="center"><img src="screenshot.png" width="45%" hight="auto"><img src="screenshotb.png" width="45%" hight="auto"></p>
+<p align="center"><img src="screenshot.png" width="45%" hight="auto"><img src="screenshotb.png" width="45%" hight="auto"><img src="screenshotd.png" width="45%" hight="auto"></p>
 <p align="center"><img src="screenshotc.png" width="45%" hight="auto">
 
 ##  :warning: CORS
 ##### Existe um problema de CORS na API, por padrão um servidor web só aceita requisições do mesmo servidor, como aplicação não tem backend, colocar `header: "Access-Control-Allow-Origin", "*";` não surte nenhum efeito.
-##### Para contornar esse problema foi adicionado o [cors-anywhere](https://cors-anywhere.herokuapp.com/). Antes de abrir o deploy ou executar a aplicação local é necessario acessar o site [https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/) e clicar no botão `"Request temporary access to the demo server"`
+##### Para contornar esse problema foi adicionado o [cors-anywhere](https://cors-anywhere.herokuapp.com/). Antes de executar a aplicação local é necessario acessar o site [https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/) e clicar no botão `"Request temporary access to the demo server"`
 
 ##  :computer: Deploy
 - [e-com](https://)
@@ -43,15 +43,15 @@ $ yarn start
 $ npm start
 ```
 
-##### Se a aplicação não abrir automaticamente no navegador, basta abrir [http://localhost:3000](http://localhost:3000) para visualizar a aplicação. 
+##### Aplicação abrirá no [http://localhost:3000](http://localhost:3000)
 ##### Lembre-se de acessar o cors-anywhere e abilitar o demo server.
 
 ##  :memo: Considerações
 
 ### Projeto
 - Por falta de uma documentação de como usar a API, tive uma certa dificuldade em construir as funcionalidades, já que a API é um tanto confusa.
-- A busca por autocomplete não funciona corretamente, a requisição é feita, mas não mostra a página do produto, pois o link na API é protegido. 
-- Houve problemas com o Cors, que depois de muitas pesquisas, pude contornar. Mas é uma solução apenas para fins de visualizar o projeto.
+- Houve problemas com o Cors.
+- A busca por autocomplete não funciona corretamente, a requisição é feita, mas não mostra a página do produto, pois o link na API é protegido.
 - Sobre a estrutura do projeto, priorizei seguir uma padronização levando em conta a manutenção do código por outros desenvolvedores. 
 ### Layout
 - Usei o layout do [Michael Yonke](https://dribbble.com/shots/11288051-Amazon-Search-Results/attachments/2897104?mode=media) como inspiração para e-com.
