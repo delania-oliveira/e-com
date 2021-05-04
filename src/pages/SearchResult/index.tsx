@@ -31,7 +31,6 @@ export default function SearchResult(props: Props) {
 
   useEffect(()=>{
     const search = props.match.params.search
-    console.log(search)
     api.get(`api/catalog_system/pub/products/search/${search?search:""}`)
       .then(response => {
          if(response.data) { 

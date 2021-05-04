@@ -6,4 +6,10 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 0;
+
+  //Responsividade
+  @media(max-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
 `
