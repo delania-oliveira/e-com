@@ -23,7 +23,7 @@ export function Header() {
       api.get(`buscaautocomplete/?productNameContains=${value}`)
       .then(response => {
          if(response.data) { 
-          
+          setModalProductOpen(true)
             setAutoCompleteResult(response.data.itemsReturned)
             console.log(response.data.itemsReturned)
           }
@@ -35,10 +35,6 @@ export function Header() {
     ) 
   }
   
-  function clickOpenModalProduct() {
-    setModalProductOpen(true)
-  }
-
   function clickCloseModalProduct() {
     setModalProductOpen(false)
   }
