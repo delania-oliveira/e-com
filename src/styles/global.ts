@@ -100,7 +100,20 @@ export const GlobalStyles = createGlobalStyle`
       left: 0px;
     }
   } 
-  
+  .react-modal-close-autocomplete {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    border: 0;
+    background: transparent;
+    color: var(--purple);
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  } 
+
   .react-modal-content-autocomplete {
     width: 100%;
     max-width: 600px;
