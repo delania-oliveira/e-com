@@ -25,7 +25,7 @@
 
 ### Clonar projeto
 ```bash 
-$ git clone https://github.com/sihann/e-com.git
+$ git clone https://github.com/delania-oliveira/e-com.git
 $ cd e-com
 ```
 ### Instalar as dependências
